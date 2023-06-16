@@ -1,0 +1,41 @@
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: 40px;
+}
+
+.row {
+    overflow: hidden;
+}
+
+.col-left {
+    float: left;
+    width: 30%;
+}
+
+.col-right {
+    float: right;
+    width: 60%;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 20px;
+}
+
+button {
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+}
+
+/* Striped tr */
+tr:nth-child(even) {
+    background-color: #b5fddd;
+}

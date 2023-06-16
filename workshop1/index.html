@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <form name="formdata">
+                        <label>ชื่อ-สกุล</label><br><br>
+                        <input type="text" name="fullname"><br><br>
+
+                        <label>ที่อยู่</label><br><br>
+                        <textarea rows="5" name="address"></textarea><br><br>
+
+                    <button type="button" onclick="submitform()">บันทึก</button>
+                    </form>
+                </div>
+                <div class="col-right">
+                    <table border="1" cellspacing="0" cellpadding="5">
+                        <thead bgcolor="yellow">
+                            <tr>
+                                <th>ลำดับ</th>
+                                <th>ชื่อ-สกุล</th>
+                                <th>ที่อยู่</th>
+                                <th>จัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

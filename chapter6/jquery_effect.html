@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effect</title>
+    <style>
+        .content {
+            width: 300px;
+            height: 200px;
+            background-color: #c1740a;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Effect</h1>
+
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officiis ut eaque quae fugiat illum sed facilis blanditiis nostrum. Voluptas provident nulla ex animi sequi voluptatibus obcaecati odio ad reiciendis.
+    </div>
+    <br>
+    <button id="btn_hide">Hide</button>
+    <button id="btn_show">Show</button>
+    <button id="btn_fadein">Fade In</button>
+    <button id="btn_fadeout">Fade Out</button><br><br>
+    <button id="btn_slideup">Slide Up</button>
+    <button id="btn_slidedown">Slide Down</button>
+    <button id="btn_slidetoggle">Slide Toggle</button>
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            // Hide
+            $('#btn_hide').click(function(){
+                $('.content').hide(100);
+            })
+            // Show
+            $('#btn_show').click(function(){
+                $('.content').show(100);
+            })
+            // Fade In
+            $('#btn_fadein').click(function(){
+                $('.content').fadeIn(1000);
+            })
+            // Fade Out
+            $('#btn_fadeout').click(function(){
+                $('.content').fadeOut(1000);
+            })
+            // Slide Up
+            $('#btn_slideup').click(function(){
+                $('.content').slideUp(500);
+            })
+            // Slide Down
+            $('#btn_slidedown').click(function(){
+                $('.content').slideDown(500);
+            })
+            // Slide Toggle
+            $('#btn_slidetoggle').click(function(){
+                $('.content').slideToggle(500);
+            })
+            
+        })
+    </script>
+</body>
+</html>

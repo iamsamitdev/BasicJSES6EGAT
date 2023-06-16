@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home Page with jQuery</h1>
+    <p id="p1">test conent 1</p>
+    <p class="p2">test conent 2</p>
+    <a href="#">Click link</a><br>
+    <button class="btnsubmit">Send</button><br>
+    <button class="btnshow">Show</button>
+    <button class="btnhide">Hide</button>
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+           // การเข้าถึง element ด้วย id
+           $('#p1').css('color','red')
+           // การเข้าถึง element ด้วย class
+           $('.p2').css('background-color','green')
+           // การเข้าถึง element ด้วย tag
+           $('a').css('font-size','30px')
+           // การเข้าถึง element ด้วย tag และ class
+           $('button.btnsubmit').css('font-size','30px')
+
+           // การเขียน event ด้วย jQuery
+           // สั่ง hide และ show
+           $('button.btnhide').click(function(){
+             $('#p1, .p2').hide(1000)
+           })
+
+           $('button.btnshow').click(function(){
+            $('#p1, .p2').show(1000)
+          })
+
+        })
+    </script>
+</body>
+</html>

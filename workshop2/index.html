@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop jQuery</title>
+    <style>
+        #content {
+            width: 500px;
+            margin-left:auto;
+            margin-right:auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        img {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore recusandae quia pariatur repudiandae harum. Obcaecati earum aperiam nostrum saepe maxime? Porro, possimus exercitationem deserunt labore et, vel deleniti suscipit ipsam soluta veritatis expedita est quam tempore laudantium molestias quis rem consectetur obcaecati mollitia non eius beatae eaque dolor aliquid? Dicta quasi ea libero distinctio ipsum dolor officia tempore atque beatae, modi praesentium fugit velit error tenetur repellendus, culpa, consequuntur repudiandae voluptas? Ut hic explicabo rerum, tempora odio voluptates cupiditate porro in minus praesentium expedita ipsum sapiente laborum repellendus sit eius beatae animi officia sed aperiam laboriosam? Recusandae architecto quas dignissimos?</p>
+
+        <img src="images/down.png" class="imgnav"> 
+        <a href="#more">ดูข้อมูลเพิ่ม</a>
+
+    </div>
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $('p').hide();
+            // $('#less').hide();
+            $('a').click(function(){
+                $('p').slideToggle()
+                
+                // Text
+                if($(this).text() == 'ดูข้อมูลเพิ่ม'){
+                    $(this).text('ซ่อนข้อความ')
+                }else{
+                    $(this).text('ดูข้อมูลเพิ่ม')
+                }
+                // Image
+                if($('img.imgnav').attr('src') == 'images/down.png'){
+                    $('img.imgnav').attr('src','images/up.png')
+                }else{
+                    $('img.imgnav').attr('src','images/down.png')
+                }
+            })
+        })
+    </script>
+</body>
+</html>
